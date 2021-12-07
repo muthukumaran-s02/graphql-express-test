@@ -9,10 +9,6 @@ var schema = buildSchema(`
     world: String
   }
 
-  type mutation {
-    
-    name: String
-  }
 `);
 
 // The root provides a resolver function for each API endpoint
@@ -20,7 +16,6 @@ var root = {
   hello: () => {
     return 'Hello, world!';
   },
-  world: (name) => 'Hi',
 };
 
 var app = express();
